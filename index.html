@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyBuddy AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="left-panel">
+
+        <h1>📚 StudyBuddy AI</h1>
+
+        <div class="card">
+            <h2>📄 Upload PDF</h2>
+            <input type="file" id="pdfFile" accept=".pdf">
+            <button id="uploadBtn">Upload</button>
+        </div>
+
+        <div class="card">
+            <h2>⏳ Focus Timer</h2>
+
+            <select id="timerSelect">
+                <option value="25">25 Minutes</option>
+                <option value="30">30 Minutes</option>
+                <option value="45">45 Minutes</option>
+                <option value="60">60 Minutes</option>
+            </select>
+
+            <h1 id="timerDisplay">25:00</h1>
+
+            <button id="startTimer">
+                Start Focus Session
+            </button>
+        </div>
+
+        <div class="card">
+            <h2>🏆 Rewards</h2>
+            <div id="rewardBox">
+                Complete a focus session to unlock rewards.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📈 Progress</h2>
+
+            <p>XP: <span id="xp">0</span></p>
+            <p>Focus Sessions: <span id="sessions">0</span></p>
+            <p>Streak: <span id="streak">1</span> Days</p>
+
+            <div id="badgeArea"></div>
+        </div>
+
+        <div class="card">
+            <h2>📝 Daily Recap</h2>
+
+            <textarea
+                id="dailyNotes"
+                placeholder="What did you learn today?"
+            ></textarea>
+
+            <button id="saveNotes">
+                Save Notes
+            </button>
+
+            <button id="generateRecap">
+                Generate AI Recap
+            </button>
+
+            <div id="recapResult"></div>
+        </div>
+
+    </div>
+
+    <div class="right-panel">
+
+        <div class="card">
+            <h2>📖 Study Guides</h2>
+
+            <button id="generateGuides">
+                Generate Study Guides
+            </button>
+
+            <div class="tabs">
+                <button class="tab-btn" onclick="showTab('primer')">
+                    Primer
+                </button>
+
+                <button class="tab-btn" onclick="showTab('deepdive')">
+                    Deep Dive
+                </button>
+            </div>
+
+            <div id="primer" class="tab-content">
+                Upload PDF and generate primer.
+            </div>
+
+            <div id="deepdive" class="tab-content hidden">
+                Upload PDF and generate deep dive.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>💬 AI Tutor</h2>
+
+            <div id="chatBox"></div>
+
+            <div class="chat-input">
+                <input
+                    type="text"
+                    id="userQuestion"
+                    placeholder="Ask anything..."
+                >
+
+                <button id="sendQuestion">
+                    Send
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

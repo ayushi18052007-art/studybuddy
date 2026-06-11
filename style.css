@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-panel {
+    width: 35%;
+    padding: 20px;
+    background: #111827;
+    overflow-y: auto;
+}
+
+.right-panel {
+    width: 65%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #3b82f6;
+    color: white;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#timerDisplay {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#rewardBox {
+    padding: 15px;
+    background: #334155;
+    border-radius: 8px;
+}
+
+.badge {
+    background: gold;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.tab-content {
+    margin-top: 20px;
+    background: #334155;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 250px;
+    white-space: pre-wrap;
+}
+
+.hidden {
+    display: none;
+}
+
+#chatBox {
+    height: 500px;
+    overflow-y: auto;
+    background: #334155;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.chat-input input {
+    flex: 1;
+}
+
+.chat-input button {
+    width: 120px;
+}
